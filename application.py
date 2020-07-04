@@ -1,6 +1,10 @@
 from flask import Flask, redirect, url_for, request
 app = Flask(__name__)
 
+@app.route("/")
+def index():
+    return 'htllo'
+
 @app.route("/welcome/<username>")
 def welcome(username):
     
